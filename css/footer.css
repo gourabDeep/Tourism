@@ -1,0 +1,45 @@
+
+/* Footer section css */
+
+.footer {
+  padding: 100px 20px 10px;
+  background-image: linear-gradient(#000000, #4f4d4f);
+  color: #ffffff;
+}
+
+.footer-logo {
+  width: 200px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.footer h4 {
+  text-align: left;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.footer p {
+  font-size: 14px;
+  text-align: left;
+  padding-right: 35px;
+}
+
+p > .fas {
+  color: #ffffff;
+}
+
+.footer .row .fas,
+.fab {
+  padding-right: 15px;
+  font-size: 15px;
+}
+
+.footer hr {
+  margin-top: 10px;
+  background: #efefef;
+}
+
+.footer .copyright {
+  text-align: center;
+}

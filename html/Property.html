@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- bodycontent CSS -->
+    <link rel="stylesheet" href="/css/location/location.css" />
+
+    <!--Footer CSS-->
+    <link rel="stylesheet" href="/css/footer.css" />
+
+    <title>Property</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <script>
+      function editOnEntryOff() {
+        document.getElementById("editLocationForm").style.display = "block";
+        document.getElementById("entryLocationForm").style.display = "none";
+      }
+      function entryOnEditOff() {
+        document.getElementById("editLocationForm").style.display = "none";
+        document.getElementById("entryLocationForm").style.display = "block";
+      }
+    </script>
+    <script src="/js/validate.js"></script>
+
+    <style>
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+    </style>
+  </head>
+  <body onload="entryOnEditOff()">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- NAV BAR Header Start -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Tourism</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/index.html"
+            >Home <span class="sr-only">(current)</span></a
+          >
+          <a class="nav-item nav-link" href="/html/Location.html">Location</a>
+          <a class="nav-item nav-link" href="/html/Property.html">Property</a>
+          <a class="nav-item nav-link" href="/html/Room.html">Room</a>
+          <a class="nav-item nav-link" href="/html/Guide.html">Guide</a>
+          <a class="nav-item nav-link" href="/html/Driver.html">Driver</a>
+          <a class="nav-item nav-link" href="/html/Adventure.html">Adventure</a>
+          <a class="nav-item nav-link" href="#">Customer</a>
+          <a class="nav-item nav-link" href="#">Booking</a>
+          <a class="nav-item nav-link" href="#">Report</a>
+          <a class="nav-item nav-link" href="#">Alarm</a>
+        </div>
+      </div>
+    </nav>
+    <!-- NAV BAR Header Close -->
+
+    <!--  Body Content Start -->
+    <section class="header-hero hfeed site">
+      <div class="hero-wrapper">
+        <div class="hero-bg" style="background: url(/images/hut.jpg)"></div>
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              <header class="entry-header">
+                <h1 class="page-title">Build Location</h1>
+                <p>
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                  occaecat cupidatat non proiden.
+                </p>
+              </header>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="breadcrumbs-wrapper-line"></div>
+    </section>
+
+    <!--Search Bar-->
+
+    <form id="searchTable">
+      <div class="form-row">
+        <div class="col-md-3 mb-2">
+          <label for="validationDefault02">Location State</label>
+          <select
+            class="form-control"
+            id="lacationState"
+            name="locationState"
+            required
+          >
+            <option>Andhra Pradesh</option>
+            <option>Arunachal Pradesh</option>
+            <option>Assam</option>
+            <option>Bihar</option>
+            <option>Chhattisgarh</option>
+            <option>Goa</option>
+            <option>Gujarat</option>
+            <option>Haryana</option>
+            <option>Himachal Pradesh</option>
+            <option>Jharkhand</option>
+            <option>Karnataka</option>
+            <option>Kerala</option>
+            <option>Madhya Pradesh</option>
+            <option>Maharashtra</option>
+            <option>Manipur</option>
+            <option>Meghalaya</option>
+            <option>Mizoram</option>
+            <option>Nagaland</option>
+            <option>Odisha</option>
+            <option>Punjab</option>
+            <option>Rajasthan</option>
+            <option>Sikkim</option>
+            <option>Tamil Nadu</option>
+            <option>Telangana</option>
+            <option>Tripura</option>
+            <option>Uttar Pradesh</option>
+            <option>Uttarakhand</option>
+            <option>West Bengal</option>
+            <option>Andaman and Nicobar Islands</option>
+            <option>Chandigarh</option>
+            <option>Dadra and Nagar Haveli and Daman and Diu</option>
+            <option>Delhi</option>
+            <option>Lakshadweep</option>
+            <option>Puducherry</option>
+          </select>
+        </div>
+
+        <div class="col-md-3 mb-2">
+          <label for="validationDefault01">Location name</label>
+          <select
+            class="form-control"
+            id="lacationState"
+            name="locationState"
+            required
+          >
+            <option>Andhra Pradesh</option>
+            <option>Arunachal Pradesh</option>
+            <option>Assam</option>
+            <option>Bihar</option>
+            <option>Chhattisgarh</option>
+            <option>Goa</option>
+            <option>Gujarat</option>
+            <option>Haryana</option>
+            <option>Himachal Pradesh</option>
+          </select>
+        </div>
+        <div class="col-md-3 mb-2">
+          <label for="validationDefault01">Property name</label>
+          <select
+            class="form-control"
+            id="lacationState"
+            name="locationState"
+            required
+          >
+            <option>Andhra Pradesh</option>
+            <option>Arunachal Pradesh</option>
+            <option>Assam</option>
+            <option>Bihar</option>
+            <option>Chhattisgarh</option>
+            <option>Goa</option>
+            <option>Gujarat</option>
+            <option>Haryana</option>
+            <option>Himachal Pradesh</option>
+          </select>
+        </div>
+        <div class="col-md-3 mb-2">
+          <label for="validationDefault02"></label>
+          <button class="btn btn-primary locationButton" type="submit">
+            Search Location
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <!--Search bar close-->
+
+    <!-- Show Location Table Data that is in DB-->
+    <center>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Location Name</th>
+            <th scope="col">Location State</th>
+            <th scope="col">Locaton Pincode</th>
+            <th scope="col">Description</th>
+            <th scope="col"><p id="textAction">Action 1</p></th>
+            <th scope="col"><p id="textAction">Action 2</p></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Location Name">Ladakh</td>
+            <td data-label="Location State">Jammu & Kashmir</td>
+            <td data-label="Locaton Pincode">194101</td>
+            <td data-label="Description">
+              Union Territory of Ladakh is situated in North of India consisting
+              of two districts Leh and Kargil.
+            </td>
+            <td>
+              <button class="locationEdit" onClick="editOnEntryOff()">
+                Edit
+              </button>
+            </td>
+            <td>
+              <button class="locationEdit" onClick="editOnEntryOff()">
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </center>
+    <br />
+    <!-- Either Edit or Create-->
+    <center>
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          onClick="editOnEntryOff()"
+        >
+          Edit Location
+        </button>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          onClick="entryOnEditOff()"
+        >
+          Entry Location
+        </button>
+      </div>
+    </center>
+
+    <!--Form Build (editLocationForm)-->
+    <form id="editLocationForm">
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label for="inputState_edit">State</label>
+          <select
+            id="inputState_edit"
+            name="inputState_edit"
+            class="form-control"
+            required
+          >
+            <option selected disabled>Choose...</option>
+            <option>Andhra Pradesh</option>
+            <option>Arunachal Pradesh</option>
+            <option>Assam</option>
+            <option>Bihar</option>
+            <option>Chhattisgarh</option>
+            <option>Goa</option>
+            <option>Gujarat</option>
+            <option>Haryana</option>
+            <option>Himachal Pradesh</option>
+            <option>Jharkhand</option>
+            <option>Karnataka</option>
+            <option>Kerala</option>
+            <option>Madhya Pradesh</option>
+            <option>Maharashtra</option>
+            <option>Manipur</option>
+            <option>Meghalaya</option>
+            <option>Mizoram</option>
+            <option>Nagaland</option>
+            <option>Odisha</option>
+            <option>Punjab</option>
+            <option>Rajasthan</option>
+            <option>Sikkim</option>
+            <option>Tamil Nadu</option>
+            <option>Telangana</option>
+            <option>Tripura</option>
+            <option>Uttar Pradesh</option>
+            <option>Uttarakhand</option>
+            <option>West Bengal</option>
+            <option>Andaman and Nicobar Islands</option>
+            <option>Chandigarh</option>
+            <option>Dadra and Nagar Haveli and Daman and Diu</option>
+            <option>Delhi</option>
+            <option>Lakshadweep</option>
+            <option>Puducherry</option>
+          </select>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="plocationName_edit">Location Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="plocationName_edit"
+            name="plocationName_edit"
+            oninput="editPropertylocationName()"
+          />
+        </div>
+        <div class="form-group col-md-3">
+          <label for="propertyType_edit">Property Type</label>
+          <select
+            id="propertyType_edit"
+            name="propertyType_edit"
+            class="form-control"
+            required
+          >
+            <option selected disabled>Choose</option>
+            <option>Apartment</option>
+            <option>Villa</option>
+            <option>Home Stay</option>
+            <option>Hotels</option>
+          </select>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="hotelname_edit">Hotel Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="hotelname_edit"
+            name="hotelname_edit"
+            oninput="editHotelName()"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="mapLocation_edit">Google Map</label>
+        <input
+          type="text"
+          class="form-control"
+          id="mapLocation_edit"
+          name="mapLocation_edit"
+          placeholder="Enter the URL"
+          required
+        />
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="street_edit">Street</label>
+          <input
+            type="text"
+            class="form-control"
+            id="street_edit"
+            name="street_edit"
+            oninput="editStreet()"
+          />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="City_edit">City</label>
+          <input
+            type="text"
+            class="form-control"
+            id="City_edit"
+            name="City_edit"
+            oninput="editCity()"
+          />
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="pPincode_edit">Pin Code</label>
+          <input
+            type="number"
+            class="form-control"
+            id="pPincode_edit"
+            name="pPincode_edit"
+            onclick="pEditPincode()"
+          />
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="star">Star</label>
+          <select id="inputStar" class="form-control" name="inputStar" required>
+            <option selected disabled>Choose</option>
+            <option>1 Star</option>
+            <option>2 Star</option>
+            <option>3 Star</option>
+            <option>4 Star</option>
+            <option>5 Star</option>
+            <option>7 Star</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="petFriendly">Pet Friendly</label>
+          <select id="inputPet" name="inputPet" class="form-control" required>
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="parking">Parking</label>
+          <select
+            id="inputParking"
+            name="inputParking"
+            class="form-control"
+            required
+          >
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="inputLift">Lift</label>
+          <select id="inputLift" name="inputLift" class="form-control" required>
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputResturant">Resturant</label>
+          <select
+            id="inputResturant"
+            name="inputResturant"
+            class="form-control"
+            required
+          >
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputWheelChair">Wheel Chair</label>
+          <select
+            id="inputWheelChair"
+            name="inputWheelChair"
+            class="form-control"
+            required
+          >
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputInTime">Check-in Time</label>
+          <input
+            type="time"
+            class="form-control"
+            id="inputInTime"
+            name="inputInTime"
+            required
+          />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputOutTime">Check-out Time</label>
+          <input
+            type="time"
+            class="form-control"
+            id="inputOutTime"
+            name="inputOutTime"
+            required
+          />
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="inputSmoking">Smoking Allowed</label>
+          <select
+            id="inputSmoking"
+            name="inputSmoking"
+            class="form-control"
+            required
+          >
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="inputCouples"> Unmarried Couples Allowed</label>
+          <select
+            id="inputCouples"
+            name="inputCouples"
+            class="form-control"
+            required
+          >
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputAlchol">Alcohol Allowed</label>
+          <select
+            id="inputAlchol"
+            name="inputAlchol"
+            class="form-control"
+            required
+          >
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputBachelors"> Bachelors Allowed</label>
+          <select
+            id="inputBachelors"
+            name="inputBachelors"
+            class="form-control"
+            required
+          >
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="pContact_edit">Contact No</label>
+          <input
+            type="number"
+            class="form-control"
+            id="pContact_edit"
+            name="pContact_edit"
+          />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="pAternative_edit">Alternative Contact No</label>
+          <input
+            type="number"
+            class="form-control"
+            id="pAternative_edit"
+            name="pAternative_edit"
+          />
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="pManager_edit">Manager No</label>
+          <input
+            type="number"
+            class="form-control"
+            id="pManager_edit"
+            name="pManager_edit"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="pDescription_edit">Description</label>
+        <textarea
+          class="form-control"
+          id="pDescription_edit"
+          name="pDescription_edit"
+          rows="3"
+          oninput="pEditDescription()"
+        ></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Edit Property</button>
+    </form>
+    <!--Form Build (entryLocationForm)-->
+    <form id="entryLocationForm">
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label for="inputState">State</label>
+          <select
+            id="inputState"
+            name="inputState"
+            class="form-control"
+            required
+          >
+            <option selected disabled>Choose...</option>
+            <option>Andhra Pradesh</option>
+            <option>Arunachal Pradesh</option>
+            <option>Assam</option>
+            <option>Bihar</option>
+            <option>Chhattisgarh</option>
+            <option>Goa</option>
+            <option>Gujarat</option>
+            <option>Haryana</option>
+            <option>Himachal Pradesh</option>
+            <option>Jharkhand</option>
+            <option>Karnataka</option>
+            <option>Kerala</option>
+            <option>Madhya Pradesh</option>
+            <option>Maharashtra</option>
+            <option>Manipur</option>
+            <option>Meghalaya</option>
+            <option>Mizoram</option>
+            <option>Nagaland</option>
+            <option>Odisha</option>
+            <option>Punjab</option>
+            <option>Rajasthan</option>
+            <option>Sikkim</option>
+            <option>Tamil Nadu</option>
+            <option>Telangana</option>
+            <option>Tripura</option>
+            <option>Uttar Pradesh</option>
+            <option>Uttarakhand</option>
+            <option>West Bengal</option>
+            <option>Andaman and Nicobar Islands</option>
+            <option>Chandigarh</option>
+            <option>Dadra and Nagar Haveli and Daman and Diu</option>
+            <option>Delhi</option>
+            <option>Lakshadweep</option>
+            <option>Puducherry</option>
+          </select>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="inputLocationName">Location Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputLocationName"
+            name="inputLocationName"
+            required
+          />
+        </div>
+        <div class="form-group col-md-3">
+          <label for="inputProperty">Property Type</label>
+          <select
+            id="inputProperty"
+            class="form-control"
+            name="inputProperty"
+            required
+          >
+            <option selected disabled>Choose</option>
+            <option>Apartment</option>
+            <option>Villa</option>
+            <option>Home Stay</option>
+            <option>Hotels</option>
+          </select>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="inputHotel">Hotel Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputHotel"
+            name="inputHotel"
+            required
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputMapLocation">Google Map</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputMapLocation"
+          placeholder=" Enter the URL"
+          name="inputMapLocation"
+          required
+        />
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="inputStreet">Street</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputStreet"
+            name="inputStreet"
+            required
+          />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputCity">City</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputCity"
+            name="inputCity"
+            required
+          />
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="inputZip">Pin Code</label>
+          <input
+            type="number"
+            class="form-control"
+            id="inputZip"
+            name="inputZip"
+            required
+          />
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="inputStar">Star</label>
+          <select id="inputStar" name="inputStar" class="form-control" required>
+            <option selected disabled>Choose</option>
+            <option>Not Mentioned</option>
+            <option>2 Star</option>
+            <option>3 Star</option>
+            <option>4 Star</option>
+            <option>5 Star</option>
+            <option>7 Star</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="inputPet">Pet Friendly</label>
+          <select id="inputPet" name="inputPet" class="form-control" required>
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="inputParking">Parking</label>
+          <select
+            id="inputParking"
+            name="inputParking"
+            class="form-control"
+            required
+          >
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="inputLift">Lift</label>
+          <select id="inputLift" name="inputLift" class="form-control" required>
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputResturant">Resturant</label>
+          <select
+            id="inputResturant"
+            name="inputResturant"
+            class="form-control"
+            required
+          >
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputWheelChair">Wheel Chair</label>
+          <select
+            id="inputWheelChair"
+            class="form-control"
+            name="inputWheelChair"
+            required
+          >
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputInTime">Check-in Time</label>
+          <input type="time" class="form-control" id="inputInTime" required />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputOutTime">Check-out Time</label>
+          <input
+            type="time"
+            class="form-control"
+            id="inputOutTime"
+            name="inputOutTime"
+            required
+          />
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="inputSmoking">Smoking Allowed</label>
+          <select
+            id="inputSmoking"
+            class="form-control"
+            name="inputSmoking"
+            required
+          >
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="inputCouples"> Unmarried Couples Allowed</label>
+          <select
+            id="inputCouples"
+            class="form-control"
+            name="inputCouples"
+            required
+          >
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputAlchol">Alcohol Allowed</label>
+          <select
+            id="inputAlchol"
+            name="inputAlchol"
+            required
+            class="form-control"
+          >
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputBachelors"> Bachelors Allowed</label>
+          <select
+            id="inputBachelors"
+            class="form-control"
+            name="inputBachelors"
+            required
+          >
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputNumber">Contact No</label>
+          <input
+            type="number"
+            class="form-control"
+            id="inputNumber"
+            name="inputNumber"
+            required
+          />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputANumber">Alternative Contact No</label>
+          <input
+            type="number"
+            class="form-control"
+            id="inputANumber"
+            name="inputANumber"
+            required
+          />
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="inputMNumber">Manager No</label>
+          <input
+            type="number"
+            class="form-control"
+            id="inputMNumber"
+            name="inputMNumber"
+            required
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Description</label>
+        <textarea
+          class="form-control"
+          id="locationDescription"
+          name="locationDescription"
+          rows="3"
+        ></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Add Property</button>
+    </form>
+    <!--  Body Content Close -->
+
+    <!-- Footer section goes here -->
+    <section class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <img
+              src="https://i.ibb.co/FHwm1fL/triptok-logo.png"
+              alt="triptok"
+              class="footer-logo"
+            />
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
+              omnis eveniet iusto minima tenetur voluptatum nam officiis
+              suscipit. Aut delectus facere eaque aperiam sunt maxime ipsam
+              dicta dolorum distinctio voluptatum!
+            </p>
+          </div>
+          <div class="col-md-3">
+            <h4>Features</h4>
+            <p>Lorem ipsum</p>
+            <p>eveniet iusto</p>
+            <p>dolorum distinctio</p>
+          </div>
+          <div class="col-md-3">
+            <h4>Quick Contact</h4>
+            <p><i class="fas fa-phone"></i> +91 9854332456</p>
+            <p><i class="fas fa-envelope-open-text"></i> support@triptok.com</p>
+            <p><i class="fas fa-home"></i> XYZ Colony, BLR-68, IND</p>
+          </div>
+          <div class="col-md-3">
+            <h4>Follw us</h4>
+            <p><i class="fab fa-facebook"></i> Facebook</p>
+            <p><i class="fab fa-twitter-square"></i> Twitter</p>
+            <p><i class="fab fa-instagram-square"></i> Instagram</p>
+          </div>
+        </div>
+        <hr />
+        <p class="copyright">Copyright &copy; Triptok</p>
+      </div>
+    </section>
+    <!-- ./ Footer section ends here -->
+  </body>
+</html>

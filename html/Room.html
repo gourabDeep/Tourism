@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- bodycontent CSS -->
+    <link rel="stylesheet" href="/css/location/location.css" />
+
+    <!--Footer CSS-->
+    <link rel="stylesheet" href="/css/footer.css" />
+
+    <title>Room</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <script>
+      function editOnEntryOff() {
+        document.getElementById("editLocationForm").style.display = "block";
+        document.getElementById("entryLocationForm").style.display = "none";
+      }
+      function entryOnEditOff() {
+        document.getElementById("editLocationForm").style.display = "none";
+        document.getElementById("entryLocationForm").style.display = "block";
+      }
+    </script>
+  </head>
+  <body onload="entryOnEditOff()">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- NAV BAR Header Start -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Tourism</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/index.html"
+            >Home <span class="sr-only">(current)</span></a
+          >
+          <a class="nav-item nav-link" href="/html/Location.html">Location</a>
+          <a class="nav-item nav-link" href="/html/Property.html">Property</a>
+          <a class="nav-item nav-link" href="/html/Room.html">Room</a>
+          <a class="nav-item nav-link" href="/html/Guide.html">Guide</a>
+          <a class="nav-item nav-link" href="/html/Driver.html">Driver</a>
+          <a class="nav-item nav-link" href="/html/Adventure.html">Adventure</a>
+          <a class="nav-item nav-link" href="#">Customer</a>
+          <a class="nav-item nav-link" href="#">Booking</a>
+          <a class="nav-item nav-link" href="#">Report</a>
+          <a class="nav-item nav-link" href="#">Alarm</a>
+        </div>
+      </div>
+    </nav>
+    <!-- NAV BAR Header Close -->
+
+    <!--  Body Content Start -->
+    <section class="header-hero hfeed site">
+      <div class="hero-wrapper">
+        <div
+          class="hero-bg"
+          style="
+            background: url(https://img.freepik.com/free-photo/luxury-classic-modern-bedroom-suite-hotel_105762-1787.jpg?w=1380&t=st=1692535705~exp=1692536305~hmac=3bd0e41dd09fb1c3f9662f4d5202f71412306c3c92a74d53ec16b94e79919983);
+          "
+        ></div>
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              <header class="entry-header">
+                <h1 class="page-title">Build Location</h1>
+                <p>
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                  occaecat cupidatat non proiden.
+                </p>
+              </header>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="breadcrumbs-wrapper-line"></div>
+    </section>
+
+    <!--Search Bar-->
+
+    <form id="searchTable">
+      <div class="form-row">
+        <div class="col-md-3 mb-2">
+          <label for="validationDefault02">Location State</label>
+          <select class="form-control" id="lacationState" name="locationState">
+            <option>Andhra Pradesh</option>
+            <option>Arunachal Pradesh</option>
+            <option>Assam</option>
+            <option>Bihar</option>
+            <option>Chhattisgarh</option>
+            <option>Goa</option>
+            <option>Gujarat</option>
+            <option>Haryana</option>
+            <option>Himachal Pradesh</option>
+            <option>Jharkhand</option>
+            <option>Karnataka</option>
+            <option>Kerala</option>
+            <option>Madhya Pradesh</option>
+            <option>Maharashtra</option>
+            <option>Manipur</option>
+            <option>Meghalaya</option>
+            <option>Mizoram</option>
+            <option>Nagaland</option>
+            <option>Odisha</option>
+            <option>Punjab</option>
+            <option>Rajasthan</option>
+            <option>Sikkim</option>
+            <option>Tamil Nadu</option>
+            <option>Telangana</option>
+            <option>Tripura</option>
+            <option>Uttar Pradesh</option>
+            <option>Uttarakhand</option>
+            <option>West Bengal</option>
+            <option>Andaman and Nicobar Islands</option>
+            <option>Chandigarh</option>
+            <option>Dadra and Nagar Haveli and Daman and Diu</option>
+            <option>Delhi</option>
+            <option>Lakshadweep</option>
+            <option>Puducherry</option>
+          </select>
+        </div>
+
+        <div class="col-md-2 mb-2">
+          <label for="validationDefault01">Location name</label>
+          <select class="form-control" id="lacationState" name="locationState">
+            <option>Goa Candolim</option>
+            <option>Goa Calangute</option>
+            <option>Goa Anzuana</option>
+            <option>Panjim</option>
+          </select>
+        </div>
+        <div class="col-md-2 mb-2">
+          <label for="validationDefault01">Property name</label>
+          <select class="form-control" id="lacationState" name="locationState">
+            <option>Gold Palace</option>
+            <option>River Palace</option>
+            <option>JW Marriot</option>
+          </select>
+        </div>
+        <div class="col-md-2 mb-2">
+          <label for="validationDefault01">Room No</label>
+          <select class="form-control" id="lacationState" name="locationState">
+            <option selected disabled>Choose</option>
+            <option>201</option>
+            <option>202</option>
+            <option>203</option>
+          </select>
+        </div>
+        <div class="col-md-2 mb-2">
+          <label for="validationDefault02"></label>
+          <button class="btn btn-primary locationButton" type="submit">
+            Search Room
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <!--Search bar close-->
+
+    <!-- Show Location Table Data that is in DB-->
+    <center>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Room No</th>
+            <th scope="col">Type of room</th>
+            <th scope="col">Occupancy</th>
+            <th scope="col">Ac/Non-Ac</th>
+            <th scope="col"><p id="textAction">Action 1</p></th>
+            <th scope="col"><p id="textAction">Action 2</p></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Room No">201</td>
+            <td data-label="Location State">Standard</td>
+            <td data-label="Locaton Pincode">2</td>
+            <td data-label="Description">AC</td>
+            <td>
+              <button class="locationEdit" onClick="editOnEntryOff()">
+                Edit
+              </button>
+            </td>
+            <td>
+              <button class="locationEdit" onClick="editOnEntryOff()">
+                Delete
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td data-label="Room No">202</td>
+            <td data-label="Location State">Standard</td>
+            <td data-label="Locaton Pincode">2</td>
+            <td data-label="Description">AC</td>
+            <td>
+              <button class="locationEdit" onClick="editOnEntryOff()">
+                Edit
+              </button>
+            </td>
+            <td>
+              <button class="locationEdit" onClick="editOnEntryOff()">
+                Delete
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td data-label="Room No">203</td>
+            <td data-label="Location State">Standard</td>
+            <td data-label="Locaton Pincode">2</td>
+            <td data-label="Description">AC</td>
+            <td>
+              <button class="locationEdit" onClick="editOnEntryOff()">
+                Edit
+              </button>
+            </td>
+            <td>
+              <button class="locationEdit" onClick="editOnEntryOff()">
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </center>
+    <br />
+    <!-- Either Edit or Create-->
+    <center>
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          onClick="editOnEntryOff()"
+        >
+          Edit Location
+        </button>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          onClick="entryOnEditOff()"
+        >
+          Entry Location
+        </button>
+      </div>
+    </center>
+
+    <!--Form Build (editLocationForm)-->
+    <form id="editLocationForm">
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label for="inputState">State</label>
+          <select
+            id="inputState"
+            class="form-control"
+            name="inputState"
+            required
+          >
+            <option>Andhra Pradesh</option>
+            <option>Arunachal Pradesh</option>
+            <option>Assam</option>
+            <option>Bihar</option>
+            <option>Chhattisgarh</option>
+            <option>Goa</option>
+            <option>Gujarat</option>
+            <option>Haryana</option>
+            <option>Himachal Pradesh</option>
+            <option>Jharkhand</option>
+            <option>Karnataka</option>
+            <option>Kerala</option>
+            <option>Madhya Pradesh</option>
+            <option>Maharashtra</option>
+            <option>Manipur</option>
+            <option>Meghalaya</option>
+            <option>Mizoram</option>
+            <option>Nagaland</option>
+            <option>Odisha</option>
+            <option>Punjab</option>
+            <option>Rajasthan</option>
+            <option>Sikkim</option>
+            <option>Tamil Nadu</option>
+            <option>Telangana</option>
+            <option>Tripura</option>
+            <option>Uttar Pradesh</option>
+            <option>Uttarakhand</option>
+            <option>West Bengal</option>
+            <option>Andaman and Nicobar Islands</option>
+            <option>Chandigarh</option>
+            <option>Dadra and Nagar Haveli and Daman and Diu</option>
+            <option>Delhi</option>
+            <option>Lakshadweep</option>
+            <option>Puducherry</option>
+          </select>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="inputLocationName">Location Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputLocationName"
+            placeholder="Jammu and Kashmir"
+            name="inputLocationName"
+            required
+          />
+        </div>
+        <div class="form-group col-md-3">
+          <label for="inputProperty">Property Type</label>
+          <select
+            id="inputProperty"
+            name="inputProperty"
+            required
+            class="form-control"
+          >
+            <option selected disabled>Choose</option>
+            <option>Apartment</option>
+            <option>Villa</option>
+            <option>Home Stay</option>
+            <option>Hotels</option>
+          </select>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="inputHotel">Hotel Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputPassword4"
+            placeholder="Palace Hotel"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">Google Map</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputAddress2"
+          placeholder=""
+        />
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="inputCity">Street</label>
+          <input type="text" class="form-control" id="inputStreet" />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputCity">City</label>
+          <input type="text" class="form-control" id="inputCity" />
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="inputZip">Pin Code</label>
+          <input type="text" class="form-control" id="inputZip" />
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="inputAddress">Star</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Not Mentioned</option>
+            <option>2 Star</option>
+            <option>3 Star</option>
+            <option>4 Star</option>
+            <option>5 Star</option>
+            <option>7 Star</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="inputAddress">Pet Friendly</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="inputAddress">Parking</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="inputAddress">Lift</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputAddress">Resturant</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputAddress">Wheel Chair</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputZip">Check-in Time</label>
+          <input type="time" class="form-control" id="inputZip" />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputZip">Check-out Time</label>
+          <input type="time" class="form-control" id="inputZip" />
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="inputAddress">Smoking Allowed</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="inputAddress"> Unmarried Couples Allowed</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputAddress">Alcohol Allowed</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputAddress"> Bachelors Allowed</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputZip">Contact No</label>
+          <input type="text" class="form-control" id="inputZip" />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputZip">Alternative Contact No</label>
+          <input type="text" class="form-control" id="inputZip" />
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="inputAddress">Manager No</label>
+          <input type="text" class="form-control" id="inputZip" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Description</label>
+        <textarea
+          class="form-control"
+          id="locationDescription"
+          name="locationDescription"
+          rows="3"
+        >
+Nice Place</textarea
+        >
+      </div>
+      <hr />
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="inputAddress"> Room No</label>
+          <input type="text" class="form-control" id="inputZip" />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputAddress">Type of room</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Standard</option>
+            <option>Deluxe</option>
+            <option>Paint room</option>
+            <option>Conference room</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputAddress"> Wifi Avilable</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputZip">Attached Swimming Pool</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputZip">Spa</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="inputZip">Bar Available</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="inputAddress"> 24-hour Room Service</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputAddress">Paid Airport Transfers</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputAddress"> Gym Avilable</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputZip">Price</label>
+          <input type="text" class="form-control" id="inputZip" />
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="inputZip">Complementory Breakfast</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="inputZip">AC/Non-AC</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>AC</option>
+            <option>Non-AC</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="inputAddress"> Start Date</label>
+          <input type="date" class="form-control" id="inputZip" />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputAddress"> Check-in Time</label>
+          <input type="time" class="form-control" id="inputZip" />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputAddress">End Date</label>
+          <input type="date" class="form-control" id="inputZip" />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputAddress"> Check-out Time</label>
+          <input type="time" class="form-control" id="inputZip" />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputAddress"> Occupancy </label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputAddress">Availability</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Available</option>
+            <option>Booked</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Description</label>
+        <textarea
+          class="form-control"
+          id="locationDescription"
+          name="locationDescription"
+          rows="3"
+        >
+Nice Place</textarea
+        >
+      </div>
+      <button type="submit" class="btn btn-primary">Edit Room Details</button>
+    </form>
+    <!--Form Build (entryLocationForm)-->
+    <form id="entryLocationForm">
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label for="inputState">State</label>
+          <select id="inputState" class="form-control">
+            <option selected>Choose...</option>
+            <option>...</option>
+          </select>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="inputPassword4">Location Name</label>
+          <input
+            type="password"
+            class="form-control"
+            id="inputPassword4"
+            placeholder="Jammu and Kashmir"
+          />
+        </div>
+        <div class="form-group col-md-3">
+          <label for="inputAddress">Property Type</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Apartment</option>
+            <option>Villa</option>
+            <option>Home Stay</option>
+            <option>Hotels</option>
+          </select>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="inputPassword4">Hotel Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputPassword4"
+            placeholder="Palace Hotel"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">Google Map</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputAddress2"
+          placeholder=""
+        />
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="inputCity">Street</label>
+          <input type="text" class="form-control" id="inputStreet" />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputCity">City</label>
+          <input type="text" class="form-control" id="inputCity" />
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="inputZip">Pin Code</label>
+          <input type="text" class="form-control" id="inputZip" />
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="inputAddress">Star</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Not Mentioned</option>
+            <option>2 Star</option>
+            <option>3 Star</option>
+            <option>4 Star</option>
+            <option>5 Star</option>
+            <option>7 Star</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="inputAddress">Pet Friendly</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="inputAddress">Parking</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="inputAddress">Lift</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputAddress">Resturant</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputAddress">Wheel Chair</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputZip">Check-in Time</label>
+          <input type="time" class="form-control" id="inputZip" />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputZip">Check-out Time</label>
+          <input type="time" class="form-control" id="inputZip" />
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="inputAddress">Smoking Allowed</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="inputAddress"> Unmarried Couples Allowed</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputAddress">Alcohol Allowed</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputAddress"> Bachelors Allowed</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputZip">Contact No</label>
+          <input type="text" class="form-control" id="inputZip" />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputZip">Alternative Contact No</label>
+          <input type="text" class="form-control" id="inputZip" />
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="inputAddress">Manager No</label>
+          <input type="text" class="form-control" id="inputZip" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Description</label>
+        <textarea
+          class="form-control"
+          id="locationDescription"
+          name="locationDescription"
+          rows="3"
+        >
+Nice Place</textarea
+        >
+      </div>
+      <hr />
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="inputAddress"> Room No</label>
+          <input type="text" class="form-control" id="inputZip" />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputAddress">Type of room</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Standard</option>
+            <option>Deluxe</option>
+            <option>Paint room</option>
+            <option>Conference room</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputAddress"> Wifi Avilable</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputZip">Attached Swimming Pool</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputZip">Spa</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="inputZip">Bar Available</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="inputAddress"> 24-hour Room Service</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputAddress">Paid Airport Transfers</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputAddress"> Gym Avilable</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputZip">Price</label>
+          <input type="text" class="form-control" id="inputZip" />
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="inputZip">Complementory Breakfast</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="inputZip">AC/Non-AC</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>AC</option>
+            <option>Non-AC</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="inputAddress"> Start Date</label>
+          <input type="date" class="form-control" id="inputZip" />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputAddress"> Check-in Time</label>
+          <input type="time" class="form-control" id="inputZip" />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputAddress">End Date</label>
+          <input type="date" class="form-control" id="inputZip" />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputAddress"> Check-out Time</label>
+          <input type="time" class="form-control" id="inputZip" />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputAddress"> Occupancy </label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputAddress">Availability</label>
+          <select id="inputState" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Available</option>
+            <option>Booked</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Description</label>
+        <textarea
+          class="form-control"
+          id="locationDescription"
+          name="locationDescription"
+          rows="3"
+        >
+Nice Place</textarea
+        >
+      </div>
+      <button type="submit" class="btn btn-primary">Add Room Details</button>
+    </form>
+    <!--  Body Content Close -->
+
+    <!-- Footer section goes here -->
+    <section class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <img
+              src="https://i.ibb.co/FHwm1fL/triptok-logo.png"
+              alt="triptok"
+              class="footer-logo"
+            />
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
+              omnis eveniet iusto minima tenetur voluptatum nam officiis
+              suscipit. Aut delectus facere eaque aperiam sunt maxime ipsam
+              dicta dolorum distinctio voluptatum!
+            </p>
+          </div>
+          <div class="col-md-3">
+            <h4>Features</h4>
+            <p>Lorem ipsum</p>
+            <p>eveniet iusto</p>
+            <p>dolorum distinctio</p>
+          </div>
+          <div class="col-md-3">
+            <h4>Quick Contact</h4>
+            <p><i class="fas fa-phone"></i> +91 9854332456</p>
+            <p><i class="fas fa-envelope-open-text"></i> support@triptok.com</p>
+            <p><i class="fas fa-home"></i> XYZ Colony, BLR-68, IND</p>
+          </div>
+          <div class="col-md-3">
+            <h4>Follw us</h4>
+            <p><i class="fab fa-facebook"></i> Facebook</p>
+            <p><i class="fab fa-twitter-square"></i> Twitter</p>
+            <p><i class="fab fa-instagram-square"></i> Instagram</p>
+          </div>
+        </div>
+        <hr />
+        <p class="copyright">Copyright &copy; Triptok</p>
+      </div>
+    </section>
+    <!-- ./ Footer section ends here -->
+  </body>
+</html>

@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- bodycontent CSS -->
+    <link rel="stylesheet" href="/css/location/location.css" />
+
+    <!--Footer CSS-->
+    <link rel="stylesheet" href="/Tourism/css/footer.css" />
+
+    <title>Driver</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <script>
+      function editOnEntryOff() {
+        document.getElementById("editLocationForm").style.display = "block";
+        document.getElementById("entryLocationForm").style.display = "none";
+      }
+      function entryOnEditOff() {
+        document.getElementById("editLocationForm").style.display = "none";
+        document.getElementById("entryLocationForm").style.display = "block";
+      }
+    </script>
+
+    <style>
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+    </style>
+  </head>
+  <body onload="entryOnEditOff()">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- NAV BAR Header Start -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Tourism</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/index.html"
+            >Home <span class="sr-only">(current)</span></a
+          >
+          <a class="nav-item nav-link" href="/html/Location.html">Location</a>
+          <a class="nav-item nav-link" href="/html/Property.html">Property</a>
+          <a class="nav-item nav-link" href="/html/Room.html">Room</a>
+          <a class="nav-item nav-link" href="/html/Guide.html">Guide</a>
+          <a class="nav-item nav-link" href="/html/Driver.html">Driver</a>
+          <a class="nav-item nav-link" href="/html/Adventure.html">Adventure</a>
+          <a class="nav-item nav-link" href="#">Customer</a>
+          <a class="nav-item nav-link" href="#">Booking</a>
+          <a class="nav-item nav-link" href="#">Report</a>
+          <a class="nav-item nav-link" href="#">Alarm</a>
+        </div>
+      </div>
+    </nav>
+    <!-- NAV BAR Header Close -->
+
+    <!--  Body Content Start -->
+    <section class="header-hero hfeed site">
+      <div class="hero-wrapper">
+        <div
+          class="hero-bg"
+          style="
+            background: url(https://img.freepik.com/free-photo/wide-shot-river-going-through-forest-mountains-captured-kauai-hawaii_181624-7514.jpg?w=1380&t=st=1692539091~exp=1692539691~hmac=b0b897a5cedef6ee257ea0d5881a4af471baa87b81acccca0ddeb96e4c3ded5e);
+          "
+        ></div>
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              <header class="entry-header">
+                <h1 class="page-title">Build Location</h1>
+                <p>
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                  occaecat cupidatat non proiden.
+                </p>
+              </header>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="breadcrumbs-wrapper-line"></div>
+    </section>
+
+    <!--Search Bar-->
+
+    <form id="searchTable">
+      <div class="form-row">
+        <div class="col-md-4 mb-2">
+          <label for="search_lacationState">Location State</label>
+          <select
+            class="form-control"
+            id="search_lacationState"
+            name="search_lacationState"
+          >
+            <option>Andhra Pradesh</option>
+            <option>Arunachal Pradesh</option>
+            <option>Assam</option>
+            <option>Bihar</option>
+            <option>Chhattisgarh</option>
+            <option>Goa</option>
+            <option>Gujarat</option>
+            <option>Haryana</option>
+            <option>Himachal Pradesh</option>
+            <option>Jharkhand</option>
+            <option>Karnataka</option>
+            <option>Kerala</option>
+            <option>Madhya Pradesh</option>
+            <option>Maharashtra</option>
+            <option>Manipur</option>
+            <option>Meghalaya</option>
+            <option>Mizoram</option>
+            <option>Nagaland</option>
+            <option>Odisha</option>
+            <option>Punjab</option>
+            <option>Rajasthan</option>
+            <option>Sikkim</option>
+            <option>Tamil Nadu</option>
+            <option>Telangana</option>
+            <option>Tripura</option>
+            <option>Uttar Pradesh</option>
+            <option>Uttarakhand</option>
+            <option>West Bengal</option>
+            <option>Andaman and Nicobar Islands</option>
+            <option>Chandigarh</option>
+            <option>Dadra and Nagar Haveli and Daman and Diu</option>
+            <option>Delhi</option>
+            <option>Lakshadweep</option>
+            <option>Puducherry</option>
+          </select>
+        </div>
+
+        <div class="col-md-4 mb-2">
+          <label for="search_lacationName">Location name</label>
+          <select
+            class="form-control"
+            id="search_lacationName"
+            name="search_lacationName"
+          >
+            <option>Andhra Pradesh</option>
+            <option>Arunachal Pradesh</option>
+            <option>Assam</option>
+            <option>Bihar</option>
+            <option>Chhattisgarh</option>
+            <option>Goa</option>
+            <option>Gujarat</option>
+            <option>Haryana</option>
+            <option>Himachal Pradesh</option>
+          </select>
+        </div>
+
+        <div class="col-md-4 mb-2">
+          <button class="btn btn-primary locationButton" type="submit">
+            Search Location
+          </button>
+        </div>
+      </div>
+    </form>
+    <!--Search bar close-->
+
+    <!-- Show Location Table Data that is in DB-->
+    <center>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Location Name</th>
+            <th scope="col">Location State</th>
+            <th scope="col">Locaton Pincode</th>
+            <th scope="col">Description</th>
+            <th scope="col"><p id="textAction">Action 1</p></th>
+            <th scope="col"><p id="textAction">Action 2</p></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Location Name">Ladakh</td>
+            <td data-label="Location State">Jammu & Kashmir</td>
+            <td data-label="Locaton Pincode">194101</td>
+            <td data-label="Description">
+              Union Territory of Ladakh is situated in North of India consisting
+              of two districts Leh and Kargil.
+            </td>
+            <td>
+              <button class="locationEdit" onClick="editOnEntryOff()">
+                Edit
+              </button>
+            </td>
+            <td>
+              <button class="locationEdit" onClick="editOnEntryOff()">
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </center>
+    <br />
+    <!-- Either Edit or Create-->
+    <center>
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          onClick="editOnEntryOff()"
+        >
+          Edit Location
+        </button>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          onClick="entryOnEditOff()"
+        >
+          Entry Location
+        </button>
+      </div>
+    </center>
+    <!--Form Build (editDriverForm)-->
+    <form id="editLocationForm">
+      <!-- Edit Driver 1st row -->
+      <div class="form-row">
+        <div class="col-md-2 mb-2">
+          <label for="edit_DriverLocationState">Location State</label>
+          <select
+            class="form-control"
+            id="edit_DriverLocationState"
+            name="edit_DriverLocationState"
+          >
+            <option>Andhra Pradesh</option>
+            <option>Arunachal Pradesh</option>
+            <option>Assam</option>
+            <option>Bihar</option>
+            <option>Chhattisgarh</option>
+            <option>Goa</option>
+            <option>Gujarat</option>
+            <option>Haryana</option>
+            <option>Himachal Pradesh</option>
+            <option>Jharkhand</option>
+            <option>Karnataka</option>
+            <option>Kerala</option>
+            <option>Madhya Pradesh</option>
+            <option>Maharashtra</option>
+            <option>Manipur</option>
+            <option>Meghalaya</option>
+            <option>Mizoram</option>
+            <option>Nagaland</option>
+            <option>Odisha</option>
+            <option>Punjab</option>
+            <option>Rajasthan</option>
+            <option>Sikkim</option>
+            <option>Tamil Nadu</option>
+            <option>Telangana</option>
+            <option>Tripura</option>
+            <option>Uttar Pradesh</option>
+            <option>Uttarakhand</option>
+            <option>West Bengal</option>
+            <option>Andaman and Nicobar Islands</option>
+            <option>Chandigarh</option>
+            <option>Dadra and Nagar Haveli and Daman and Diu</option>
+            <option>Delhi</option>
+            <option>Lakshadweep</option>
+            <option>Puducherry</option>
+          </select>
+        </div>
+        <div class="col-md-2 mb-2">
+          <label for="edit_DriverLocationName">Location name</label>
+          <select
+            class="form-control"
+            id="edit_DriverLocationName"
+            name="edit_DriverLocationName"
+          >
+            <option>Andhra Pradesh</option>
+            <option>Arunachal Pradesh</option>
+            <option>Assam</option>
+            <option>Bihar</option>
+            <option>Chhattisgarh</option>
+            <option>Goa</option>
+            <option>Gujarat</option>
+            <option>Haryana</option>
+            <option>Himachal Pradesh</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="edit_driverfName">Driver First Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="edit_driverfName"
+            name="edit_driverfName"
+            required
+          />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="edit_drivermName">Driver Middle Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="edit_drivermName"
+            name="edit_drivermName"
+          />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="edit_driverlName">Driver Last Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="edit_driverlName"
+            name="edit_driverlName"
+            required
+          />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="edit_driverlanguage">Language Known</label>
+          <select
+            id="edit_driverlanguage"
+            class="form-control"
+            name="editlanguage"
+          >
+            <option selected disabled>Choose..</option>
+            <option>Hindi</option>
+            <option>English</option>
+            <option>Bengali</option>
+          </select>
+        </div>
+      </div>
+      <!-- Edit Driver 2nd row -->
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="edit_DriverContact">Contact No</label>
+          <input
+            type="number"
+            class="form-control"
+            id="edit_DriverContact"
+            name="edit_DriverContact"
+            required
+          />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="edit_DriverEmail">Email Id</label>
+          <input
+            type="email"
+            class="form-control"
+            id="edit_DriverEmail"
+            name="edit_DriverEmail"
+            required
+          />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="edit_DriverGovId">Government ID Type</label>
+          <select
+            id="edit_DriverGovId"
+            class="form-control"
+            name="edit_DriverGovId"
+          >
+            <option selected disabled>Choose..</option>
+            <option value="dL">Driving License</option>
+            <option value="voter">Voter Card</option>
+            <option value="aadhar">AAdhar Card</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="edit_DriverIdNo">ID Number</label>
+          <input
+            type="text"
+            class="form-control"
+            id="edit_DriverIdNo"
+            name="edit_DriverIdNo"
+            required
+          />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="edit_DriverFees">Fees</label>
+          <input
+            type="number"
+            class="form-control"
+            id="edit_DriverFees"
+            name="edit_DriverFees"
+            required
+          />
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="edit_DriverCar">Owner/Rented</label>
+          <select id="edit_DriverCar" class="form-control">
+            <option selected disabled>Choose</option>
+            <option>Owner</option>
+            <option>Rented</option>
+          </select>
+        </div>
+      </div>
+      <!-- Edit Driver 3rd row -->
+      <div class="form-group">
+        <label for="driver_Description">Description</label>
+        <textarea
+          class="form-control"
+          id="driver_Description"
+          name="driver_Description"
+          rows="3"
+        >
+About Driver</textarea
+        >
+      </div>
+      <button type="submit" class="btn btn-primary">Edit Driver Details</button>
+    </form>
+    <!--Form Build (entryDriverForm)-->
+    <form id="entryLocationForm">
+      <!-- Entry Driver 1st row -->
+      <div class="form-row">
+        <div class="col-md-2 mb-2">
+          <label for="entry_locationState">Location State</label>
+          <select
+            class="form-control"
+            id="entry_locationState"
+            name="entry_locationState"
+          >
+            <option>Andhra Pradesh</option>
+            <option>Arunachal Pradesh</option>
+            <option>Assam</option>
+            <option>Bihar</option>
+            <option>Chhattisgarh</option>
+            <option>Goa</option>
+            <option>Gujarat</option>
+            <option>Haryana</option>
+            <option>Himachal Pradesh</option>
+            <option>Jharkhand</option>
+            <option>Karnataka</option>
+            <option>Kerala</option>
+            <option>Madhya Pradesh</option>
+            <option>Maharashtra</option>
+            <option>Manipur</option>
+            <option>Meghalaya</option>
+            <option>Mizoram</option>
+            <option>Nagaland</option>
+            <option>Odisha</option>
+            <option>Punjab</option>
+            <option>Rajasthan</option>
+            <option>Sikkim</option>
+            <option>Tamil Nadu</option>
+            <option>Telangana</option>
+            <option>Tripura</option>
+            <option>Uttar Pradesh</option>
+            <option>Uttarakhand</option>
+            <option>West Bengal</option>
+            <option>Andaman and Nicobar Islands</option>
+            <option>Chandigarh</option>
+            <option>Dadra and Nagar Haveli and Daman and Diu</option>
+            <option>Delhi</option>
+            <option>Lakshadweep</option>
+            <option>Puducherry</option>
+          </select>
+        </div>
+        <div class="col-md-2 mb-2">
+          <label for="entry_locationName">Location name</label>
+          <select
+            class="form-control"
+            id="entry_locationName"
+            name="entry_locationName"
+          >
+            <option>Andhra Pradesh</option>
+            <option>Arunachal Pradesh</option>
+            <option>Assam</option>
+            <option>Bihar</option>
+            <option>Chhattisgarh</option>
+            <option>Goa</option>
+            <option>Gujarat</option>
+            <option>Haryana</option>
+            <option>Himachal Pradesh</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="entry_DriverfName">Driver First Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="entry_DriverfName"
+            name="entry_DriverfName"
+            required
+          />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="entry_DrivermName">Driver Middle Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="entry_DrivermName"
+            name="entry_DrivermName"
+          />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="entry_DriverlName">Driver Last Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="entry_DriverlName"
+            name="entry_DriverlName"
+            required
+          />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="enrty_DriverLanguage">Language Known</label>
+          <select
+            id="enrty_DriverLanguage"
+            class="form-control"
+            name="enrty_DriverLanguage"
+          >
+            <option selected disabled>Choose..</option>
+            <option>Hindi</option>
+            <option>English</option>
+            <option>Bengali</option>
+          </select>
+        </div>
+      </div>
+      <!-- Entry Driver 2nd row -->
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="entry_DriverContactNo">Contact No</label>
+          <input
+            type="number"
+            class="form-control"
+            id="entry_DriverContactNo"
+            name="entry_DriverContactNo"
+            required
+          />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="entry_DriverEmail">Email Id</label>
+          <input
+            type="email"
+            class="form-control"
+            id="entry_DriverEmail"
+            name="entry_DriverEmail"
+            required
+          />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="entry_DriverGovId">Government ID Type</label>
+          <select
+            id="entry_DriverGovId"
+            class="form-control"
+            name="entry_DriverGovId"
+          >
+            <option selected disabled>Choose..</option>
+            <option value="dL">Driving License</option>
+            <option value="voter">Voter Card</option>
+            <option value="aadhar">AAdhar Card</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="entry_DriverIdNo">ID Number</label>
+          <input
+            type="text"
+            class="form-control"
+            id="entry_DriverIdNo"
+            name="entry_DriverIdNo"
+          />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="entry_DriverFees">Fees</label>
+          <input
+            type="number"
+            class="form-control"
+            id="entry_DriverFees"
+            name="entry_DriverFees"
+          />
+        </div>
+        <div class="form-group col-md-2">
+          <label for="entry_DriverCar">Owner/Rented</label>
+          <select
+            id="entry_DriverCar"
+            class="form-control"
+            name="entry_DriverCar"
+          >
+            <option selected disabled>Choose</option>
+            <option>Owner</option>
+            <option>Rented</option>
+          </select>
+        </div>
+      </div>
+      <!-- Entry Driver 3rd row -->
+      <div class="form-group">
+        <label for="entry_DriverDescription">Description</label>
+        <textarea
+          class="form-control"
+          id="entry_DriverDescription"
+          name="entry_DriverDescription"
+          rows="3"
+        >
+About Driver</textarea
+        >
+      </div>
+      <button type="submit" class="btn btn-primary">Add Driver Details</button>
+    </form>
+    <!--  Body Content Close -->
+    <!-- Footer section goes here -->
+    <section class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <img
+              src="https://i.ibb.co/FHwm1fL/triptok-logo.png"
+              alt="triptok"
+              class="footer-logo"
+            />
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
+              omnis eveniet iusto minima tenetur voluptatum nam officiis
+              suscipit. Aut delectus facere eaque aperiam sunt maxime ipsam
+              dicta dolorum distinctio voluptatum!
+            </p>
+          </div>
+          <div class="col-md-3">
+            <h4>Features</h4>
+            <p>Lorem ipsum</p>
+            <p>eveniet iusto</p>
+            <p>dolorum distinctio</p>
+          </div>
+          <div class="col-md-3">
+            <h4>Quick Contact</h4>
+            <p><i class="fas fa-phone"></i> +91 9854332456</p>
+            <p><i class="fas fa-envelope-open-text"></i> support@triptok.com</p>
+            <p><i class="fas fa-home"></i> XYZ Colony, BLR-68, IND</p>
+          </div>
+          <div class="col-md-3">
+            <h4>Follw us</h4>
+            <p><i class="fab fa-facebook"></i> Facebook</p>
+            <p><i class="fab fa-twitter-square"></i> Twitter</p>
+            <p><i class="fab fa-instagram-square"></i> Instagram</p>
+          </div>
+        </div>
+        <hr />
+        <p class="copyright">Copyright &copy; Triptok</p>
+      </div>
+    </section>
+    <!-- Footer section ends here -->
+    <script src="/Tourism/js/jsForDriver.js"></script>
+  </body>
+</html>
